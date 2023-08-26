@@ -1,0 +1,265 @@
+.resume_header{
+    position: relative;
+    top: 120px;
+    color: black;
+    height: 100px;
+}
+.curve-bg {
+    position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-align: center;
+}
+.demo{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    position: relative;
+    left: 160px;
+    margin-top: 50px;
+}
+h1 {
+    margin: 0;
+    font-size: 40px;
+    z-index: -1;
+}
+
+.work{
+    margin-top: -77px;
+}
+/* ################################################################################################################### */
+/* Form */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFFFFF;
+    text-align: right !important;
+}
+
+form.signup {
+    background-color: #252525;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 30px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    width: 100%;
+    border: 5px solid transparent;
+    /*box-shadow: 0 0 10px rgba(144, 12, 63, 0.7),*/
+    /*0 0 20px rgba(144, 12, 63, 0.7),*/
+    /*0 0 30px rgba(144, 12, 63, 0.7),*/
+    /*0 0 40px rgba(144, 12, 63, 0.7);*/
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 40px rgba(255, 255, 255, 0.2);
+    color: #FFFFFF !important;
+}
+
+div.form-container select,
+.education-form select{
+    background-color: #900C3F;
+    direction: rtl;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    /*color: #444;*/
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(211, 199, 229, 0.3);
+    transition: all 0.3s ease;
+    float: right;
+    width: 320px;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 20px;
+}
+
+div.form-container select:hover {
+    background-color: rgba(144, 12, 63, 0.6);
+}
+
+div.form-container input:hover {
+    background-color: rgba(144, 12, 63, 0.6);
+}
+
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-column {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px 40px;
+}
+
+
+div.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: right;
+    direction: rtl;
+    padding-left: 25px;
+}
+
+div.form-container input {
+    width: 320px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #900C3F ;
+    color: #FFF;
+    text-align: right;
+    margin-bottom: 20px;
+    float: right;}
+
+#start-year :invalid {
+    border-color: red;
+}
+
+#education , #resume_field , #pdf{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+.education-form h2{
+    margin: 30px 0;
+}
+/*#####################################################################################*/
+
+.form-container {
+    background-color: #252525;
+    /*padding: 20px;*/
+    border-radius: 5px;
+    margin-inline:auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+.abilities-container {
+    max-width: 300px;
+}
+
+.custom-textarea {
+    position: relative;
+}
+
+.textarea-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #900C3F;
+    border-radius: 10px;
+    margin-left: 30px;
+    width: 310px;
+}
+
+div.form-container textarea {
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 10px;
+    resize: none;
+    text-align: right;
+    background-color: #5c666b;
+}
+.textarea-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* ################################################################################################################### */
+.contact-section {
+    /*background: linear-gradient(to top, hsl(264, 100%, 40%) 50%, hsl(264, 47%, 73%));*/
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: black;
+}
+.contact-form {
+    display: inline-block;
+    text-align: center;
+}
+
+.contact-form input.contact-form,
+.contact-form textarea.contact-form {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: right;
+
+    border: none;
+}
+.contact-form button {
+    background-color: rgba(144, 12, 63, 0.6);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: right;
+    cursor: pointer;
+    align-items: center;
+}
+.contact-footer {
+    background-color: rgba(144, 12, 63, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.contact-footer p {
+    margin: 0;
+}
+/* ################################################################################################################### */
+/* submit-button */
+.submit-button {
+    background-color: #900C3F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 50px;
+    width: 200px;
+}
+
+.submit-button {
+    /*left: -500px !important;*/
+
+}
+
+.submit-button:hover {
+    background-color: rgba(144, 12, 63, 0.6);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+

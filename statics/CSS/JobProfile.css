@@ -1,0 +1,130 @@
+body{
+    background: #252525;
+}
+
+.wrap{
+    margin:0 auto;
+    width:1024px;
+    direction: rtl;
+    align-items: center;
+    color: white;
+    /*box-sizing:content-box;*/
+}
+.header{
+    /*background-image: url("https://i.pinimg.com/originals/75/c2/f8/75c2f842863ae2df6b3ac2d0a4d63026.gif");*/
+    background-image: url("https://i.pinimg.com/originals/ea/77/2f/ea772f847ec65f0c7f7f8cae425bad23.gif");
+    display:flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top:125px;
+    height: 380px;
+    padding-bottom:160px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.profile{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:190px;
+    margin-left:135px;
+
+}
+.profile img{
+    width:150px;
+    height:150px;
+    margin-bottom:50px;
+    margin-top: 180px;
+}
+
+.skills h1{
+    font-size:24px;
+    margin-top: 100px;
+    /*color:#252525;*/
+    text-align:center;
+    margin-bottom:70px;
+}
+.skills ul{
+    display:flex;
+    justify-content:space-around;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+.skills li {
+    /*text-align: center;*/
+    /*border:1px solid #E0E0E0;*/
+    padding:50px 100px;
+    border-radius:5px;
+    width: 500px;
+}
+
+
+
+
+.skills .cat{
+    /*border-top:10px solid #900C3D;*/
+    /*border-right:10px solid #900C3D;*/
+    text-align: right;
+
+}
+.skills .time{
+    /*border-top:10px solid #900C3D;*/
+    /*border-left:10px solid #900C3D;*/
+    text-align: right;
+
+}
+
+.skills .edu{
+    /*border-right:10px solid #900C3D;*/
+    text-align: right;
+
+}
+
+
+.skills .personal{
+    /*border-left:10px solid #900C3D;*/
+    text-align: right;
+
+}
+
+.skills .skill{
+    /*border-left:10px solid #900C3D;*/
+    /*border-right:10px solid #900C3D;*/
+    width: 1010px;
+    /*align-items: center;*/
+}
+
+.skills .des{
+    /*border-left:10px solid #900C3D;*/
+    /*border-right:10px solid #900C3D;*/
+    width: 1010px;
+    /*align-items: center;*/
+}
+
+.skills .option{
+    /*border-left:10px solid #900C3D;*/
+    /*border-right:10px solid #900C3D;*/
+    /*border-bottom:10px solid #900C3D;*/
+    width: 1010px;
+    /*align-items: center;*/
+}
+
+.skills h2{
+    font-size:22px;
+    margin:30px 0 0 0;
+    text-align: right;
+
+}
+.skills p{
+    font-size:15px;
+    line-height:25px;
+    background: #303030;
+    width: fit-content;
+    margin-top: 0;
+}
+
+
+img.add{
+    width: 50px;
+    height: 50px;
+}

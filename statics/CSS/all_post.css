@@ -1,0 +1,14 @@
+.paginator {
+   margin: 60px auto;
+   text-align: center;
+}
+.paginator a {
+   display: inline-block;
+   padding: 6px 11px;
+   background-color: #3C3A3A;
+   color: #FFF;
+   text-decoration: none;
+}
+.paginator a.active, .paginator a:hover {
+   background-color: #900C3F;
+}
