@@ -1,0 +1,324 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/png" href="Image/Index/Logo.png"/>
+  <title>Resume</title>
+
+  <link rel="stylesheet" href="{% static 'CSS/Nav&Footer.css' %}?{% now "U" %}" />
+  <link rel="stylesheet" href="{% static 'CSS/Resume.css' %}?{% now "U" %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<body>
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Navbar -->
+<!-- __________________________________________________________________________________________________________________ -->
+<nav class="navbar visible" id="navbar">
+  <img
+          onclick="document.body.classList.toggle('open')"
+          class="burger"
+          src="D:\Final_Project\Front_Code\Front_Code\menu.svg"
+  />
+  <div class="logo">
+    <a href="{% url 'website:home' %}"> <img src="{% static 'Image/Index/Logo.png' %}" /></a>
+  </div>
+
+  <div class="menu-items">
+    <div class="menu menu-left">
+      <div class="menu-links">
+        <div class="dropdown-Services">
+          <div class="content">
+            <span class="material-symbols-outlined"> </span>
+            <a href="#">خدمات</a>
+          </div>
+          <button type="button"></button>
+          <div class="menu">
+            <a>
+              <p>پی‌کُدرز</p>
+            </a>
+            <a>
+              <p>مارکت کد</p>
+            </a>
+            <a>
+              <p>تحلیل مهارت</p>
+            </a>
+          </div>
+        </div>
+        <a href="#">تماس با ما</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!--   -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+
+<div class="form-container">
+     {% csrf_token %}
+  <form class="signup" action="{% url 'jobseeker:Resume' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+    <div class="input-container">
+        {% csrf_token %}
+      <label for="surname">نام خانوادگی</label>
+      <input type="text" id="surname" name="surname">
+    </div>
+
+    <div class="input-container">
+      <label for="name">نام</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div class="input-container">
+      <label for="birthdate">تاریخ تولد</label>
+      <input type="date" id="birthdate" name="birthdate">
+    </div>
+
+    <div class="input-container">
+      <label for="location">استان محل زندگی:</label>
+      <select id="location" name="location">
+        <option value="tehran">آذربایجان شرقی</option>
+        <option value="isfahan">آذربایجان غربی</option>
+        <option value="shiraz">اردبیل</option>
+        <option value="tehran">اصفهان</option>
+        <option value="isfahan">البرز</option>
+        <option value="shiraz">ایلام</option>
+        <option value="tehran">بوشهر</option>
+        <option value="isfahan">تهران</option>
+        <option value="shiraz">چهارمحال و بختیاری</option>
+        <option value="tehran">خراسان جنوبی</option>
+        <option value="isfahan">خراسان رضوی</option>
+        <option value="shiraz">خراسان شمالی</option>
+        <option value="tehran">خوزستان</option>
+        <option value="isfahan">زنجان</option>
+        <option value="shiraz">سمنان</option>
+        <option value="tehran">سیستان و بلوچستان</option>
+        <option value="isfahan">فارس</option>
+        <option value="shiraz">قزوین</option>
+        <option value="tehran">قم</option>
+        <option value="isfahan">کردستان</option>
+        <option value="shiraz">کرمان</option>
+        <option value="tehran">کرمانشاه</option>
+        <option value="isfahan">کهگیلویه و بویراحمد</option>
+        <option value="shiraz">گلستان</option>
+        <option value="shiraz">گیلان</option>
+        <option value="shiraz">لرستان</option>
+        <option value="shiraz">مازندران</option>
+        <option value="shiraz">مرکزی</option>
+        <option value="shiraz">هرمزگان</option>
+        <option value="shiraz">همدان</option>
+        <option value="shiraz">یزد</option>
+
+        <!-- ادامه موارد استانهای دیگر -->
+      </select>
+    </div>
+
+    <div class="input-container">
+      <label for="email">ایمیل</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <div class="input-container">
+      <label for="phone">تلفن همراه</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+
+    <div class="input-container">
+      <label for="gender">جنسیت</label>
+      <select id="gender" name="gender">
+        <option value="male">مرد</option>
+        <option value="female">زن</option>
+      </select>
+    </div>
+
+    <div class="input-container">
+      <label for="marital-status">وضعیت تاهل</label>
+      <select id="marital-status" name="marital-status">
+        <option value="single">مجرد</option>
+        <option value="married">متاهل</option>
+      </select>
+    </div>
+{#  </form>#}
+  <!-- #################################################################################################################################### -->
+
+
+{#  <form class="signup" action="{% url 'jobseeker:Resume' %}" method="post">#}
+
+
+
+
+    <div class="abilities-container">
+        {% csrf_token %}
+      <label for="abilities">توانایی‌ها</label>
+      <div class="custom-textarea">
+        <div class="textarea-wrapper">
+
+          <textarea id="abilities" name="abilities" placeholder="توانایی‌های خاص خود را وارد کنید"></textarea>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="fields">
+      <label for="Favoritefield">حوزه کاری مورد علاقه</label>
+      <select id="Favoritefield" name="Favoritefield" >
+        <option value="هوش مصنوعی و داده">هوش مصنوعی و داده</option>
+        <option value="شبکه">شبکه</option>
+        <option value="امنیت">امنیت</option>
+        <option value="طراحی">طراحی</option>
+        <option value="برنامه نویسی و توسعه">برنامه نویسی و توسعه</option>
+      </select>
+    </div>
+{#  </form>#}
+{#  <form class="signup" id="education" action="{% url 'jobseeker:Resume' %}" method="post">#}
+    <div class="education-form">
+            <h2>سوابق تحصیلی</h2>
+
+        {% csrf_token %}
+      <div>
+          <label for="field">رشته</label>
+         <input type="text" id="mager" name="mager" required />
+      </div>
+
+        <div>
+              <label for="university">دانشگاه</label>
+               <input type="text" id="university" name="university" required />
+        </div>
+
+      <div>
+          <label for="degree">آخرین مقطع تحصیلی</label>
+      <select id="degree" name="degree">
+        <option value="دیپلم">دیپلم</option>
+        <option value="کارشناسی">کارشناسی</option>
+        <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+        <option value="دکترا">دکترا</option>
+      </select>
+      </div>
+      <div>
+       <br> <label for="start-year">         سال شروع تحصیل</label>
+        <input type="number" id="start-year" name="start-year" required min="1350" />
+      </div>
+
+      <div>
+          <label for="end-year">سال پایان تحصیل</label>
+          <input type="number" id="end-year" name="end-year" required />
+      </div>
+
+    </div>
+{#  </form>#}
+{#  <form class="signup" id="resume_field" action="{% url 'jobseeker:Resume' %}" method="post" >#}
+    <div class="education-form work">
+            <h2>سوابق کاری</h2>
+
+        {% csrf_token %}
+
+      <label for="Workplace">نام محل کار</label>
+      <input type="text" id="Workplace" name="Workplace" required>
+
+      <label for="field">حوزه کاری </label>
+      <select id="field" name="field">
+        <option value="هوش مصنوعی و داده">هوش مصنوعی و داده</option>
+        <option value="شبکه">شبکه</option>
+        <option value="امنیت">امنیت</option>
+        <option value="طراحی">طراحی</option>
+        <option value="برنامه نویسی و توسعه">برنامه نویسی و توسعه</option>
+      </select>
+
+      <label for="position">پوزیشن</label>
+      <input type="text"  name="position" required>
+
+      <label for="duration">میزان سابقه کاری</label>
+      <select name="duration" id="duration" >
+            <option value="مهم نیست">مهم نیست</option>
+            <option value="حداقل 1 سال">حداقل 1 سال</option>
+            <option value="بین 1 تا 2 سال">بین 1 تا 2 سال</option>
+            <option value="بین 3 تا 6 سال">بین 3 تا 6 سال</option>
+            <option value="بیشتر از 6 سال">بیشتر از 6 سال</option>
+
+        </select>
+    </div>
+ <div class="demo">
+          <div class="education-form">
+        {% csrf_token %}
+      <label for="resume">رزومه شخصی خود را آپلود کنید</label>
+      <input type="file" id="resume" name="resume" accept=".pdf">
+  </div><br/><br/>
+  <div class="">
+     <button type="submit"  class="submit-button">ایجاد رزومه</button>
+  </div>
+ </div>
+</form>
+</div>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Footer -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+<footer class="footer-distributed">
+  <br><br>
+  <div class="footer-left">
+
+
+    <a href="{% url 'website:home' %}"><img src="{% static 'Image/Index/Logo.png' %}"></a>
+
+    <p class="footer-links">
+
+      <a href="#">همکاری</a>
+      /
+      <a href="#">پشتیبانی</a>
+      /
+      <a href="#">درباره ما</a>
+      /
+      <a href="#">ارتباط با ما</a>
+      /
+    </p>
+
+    <p class="footer-company-name">JobCoder © 2023</p>
+
+    <div class="footer-icons">
+
+      <a href="#" class="fa-brands fa-github"></a>
+      <a href="#" class="fa-brands fa-instagram"></a>
+      <a href="#" class="fa-brands fa-linkedin"></i></a>
+      <a href="#" class="fa-brands fa-twitter"></i></a>
+
+    </div>
+
+  </div>
+  <div class="footer-right">
+
+
+    <form action="#" method="post">
+
+      <input type="text" name="email" placeholder="ایمیل" autocomplete="on" required>
+      <textarea name="message" placeholder="پیعام" id="myTextarea" dir="rtl"></textarea>
+      <button type="button" class="send-massage">ارسال</button>
+
+    </form>
+
+  </div>
+
+</footer>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Scripts -->
+<!-- __________________________________________________________________________________________________________________ -->
+<script src="{% static 'JS/Index.js'%}"></script>
+{#<script src="JS/Login.js"></script>#}
+<!---->
+<!---->
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>linkedin Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{% static 'CSS/Jobvision_Blog.css' %}?{% now "U" %}" />
+</head>
+<style>
+    .banner{
+        background: url("{% static 'Image/Jobvision_Blog/Blog.gif' %}")
+    }
+</style>
+<body>
+<nav>
+  <a href="{% url 'website:home' %}"> <img class="logo" src="{% static 'Image/Linkedin_Blog/LOGO.png' %}" /></a>
+</nav>
+<header id="banner" class="banner">
+</header>
+
+<section class="container">
+  <div class="section1">
+    <h1>< تحلیل چاب ویژن/></h1>
+        <p>در حوزه مشاغل فناوری اطلاعات (IT)، ایران به عنوان یک چشم انداز پویا از نوآوری و فرصت ایستاده است. با ادامه گسترش مرز دیجیتال، درک پیچیدگی‌های گرایش‌ها و بینش‌های شغلی فناوری اطلاعات در بافت ایران به طور فزاینده‌ای حیاتی می‌شود. به کاوش ما در زمینه تجزیه و تحلیل شغل IT که به طور خاص برای ایران طراحی شده است، خوش آمدید.</p>
+        <p>این تحلیل‌ها به قلب بازار کار فناوری اطلاعات ایران می پردازد و خلاصه ای جامع از گرایش ها، مهارت ها و فرصت های شغلی کلیدی را ارائه می دهد.آنها بسیار شبیه به یک نقشه، زمینه حرفه‌های فناوری اطلاعات را در بخش‌های مختلف ترسیم می‌کنند و به جویندگان کار و کارفرمایان کمک می‌کنند تا در چشم‌انداز پویا حرکت کنند.</p>
+        <p>همانطور که در تجزیه و تحلیل شغل IT ایران پیمایش می کنیم، بیشترین مهارت ها را در دسته بندی های متمایز کشف خواهیم کرد. این بینش ها افرادی را راهنمایی می کند که به دنبال ارتقاء مجموعه مهارت های خود هستند و آنها را با تقاضاهای صنعت و اکوسیستم فناوری در حال تکامل همسو می کنند.</p>
+  </div>
+  <div class="section2">
+      <div class="right">
+        <img src="{% static 'Image/Linkedin_Blog/arrow.svg' %}">
+      </div>
+      <div class="left">
+        <p>
+         در این سفر در بازار کار فناوری اطلاعات ایران به ما بپیوندید، جایی که تجزیه و تحلیل مبتنی بر داده تصویر واضحی از فرصت‌ها و پویایی‌های منحصر به فرد این ملت پرجنب‌وجوش را نشان می‌دهد. از آنجایی که بخش فناوری اطلاعات ایران به شکوفایی خود ادامه می دهد، این بینش ها هم متخصصان و هم کارفرمایان را برای تصمیم گیری آگاهانه و ایجاد مسیرهای موفق در دنیای همیشه در حال تحول مشاغل فناوری اطلاعات توانمند می کند.
+          گروه های شغلی حوزه IT به پنج گروه تقسیم شده اند :
+        </p>
+
+        <ul class="custom-list">
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	برنامه نویسی و توسعه ( Programming)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	هوش مصنوعی و داده (AI & Data Scientist)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	طراحی (UI/UX)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	شبکه (Network)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	امنیت (Security)</span>
+          </li>
+        </ul>
+
+        <p>
+          در بعضی تحلیل ها به دلیل دریافت داده‌ی دقیق‌تر، گروه داده (Data Scientist) و هوش مصنوعی(AI) جدا در نظر گرفته شده است.
+        </p>
+      </div>
+    </div>
+  <div class="section3">
+
+
+    <div class="left">
+      <h2>< توزیع گروه شغلی فناوری اطلاعات در ایران /></h2>
+      <p>
+          نمودار ما تصویر قانع‌کننده‌ای از توزیع فرصت‌های شغلی فناوری اطلاعات (IT) در پنج گروه شغلی متمایز در بافت ایران ترسیم می‌کند. تعداد تبلیغات هر گروه به عنوان درصدی از کل آگهی‌ها در زمینه فناوری اطلاعات ارائه می شود و یک نمای کلی از روندهای غالب ارائه می دهد.
+این نمودار به پنج بخش مجزا تقسیم شده است که هر یک نشان دهنده یک گروه شغلی IT خاص است. اندازه هر بخش، نسبت آگهی‌ها در آن گروه را نسبت به کل چشم انداز شغل IT نشان می دهد.
+
+      </p>
+      <img class="percent" src="{% static 'Image/Jobvision_Blog/percent jobs .jpg' %}">
+    </div>
+    <div class="right">
+      <img class="arrow" src="{% static 'Image/Linkedin_Blog/arrowback.svg' %}">
+    </div>
+  </div>
+  <div class="section5">
+    <h2>< تحلیل مهارت های رایج در گروه های شغلی ایرانی/></h2>
+      <p>
+          نمودار ما پنجره‌ای به بخش فناوری اطلاعات بازار کار ایران است که از داده‌های جمع‌آوری‌شده از وب‌سایت‌های محلی استخراج شده است. این مهارت ها را به نمایش می گذارد که به عنوان محبوب و مکرر در گروه های شغلی متمایز تکرار می شوند.
+          برای هر گروه شغلی، نمودار مهارت هایی را مشخص می کند که به طور مداوم از نظر تقاضا برجسته می شوند. اینها مهارت هایی است که متخصصان در این زمینه ها بیشتر به دنبال آن هستند یا تبلیغ می کنند.
+جویندگان کار می توانند از این نمودار برای توسعه مهارت خود در گروه شغلی انتخابیشان که تقاضای بالایی دارند، استفاده کنند.
+کارفرمایان و استخدام‌کنندگان می‌توانند از این نمودار استفاده کنند تا جستجوی استعداد خود را با مهارت‌های رایج در هر گروه شغلی هماهنگ کنند و فرآیندهای استخدام را ساده‌تر کنند.
+
+      </p>
+  </div>
+
+  <div class="section4">
+
+
+    <div class="gallery">
+      <button class="prev-button" onclick="showImage(-1)">&#10095;</button>
+      <div class="gallery">
+        <img id="image" src="" alt="تصویر">
+        <p id="image-title">حوزه کاری</p>
+      </div>
+      <button class="next-button" onclick="showImage(1)">&#10094;</button>
+    </div>
+  </div>
+
+  <div class="section6">
+    <div class="left">
+      <h2>< توزیع کارهای remote توسط گروه شغلی/></h2>
+      <p>
+این نمودار توزیع کار remote را در بین گروه‌های شغلی مختلف به تصویر می‌کشد. این دیدگاه روشنی از نحوه تعامل هر دسته شغلی با remote ارائه می دهد و بینش های ارزشمندی را در مورد رواج محیط remote در حوزه های مختلف حرفه ای ارائه می دهد.      </p>
+      <img class="remote" src="{% static 'Image/Jobvision_Blog/remote.jpg' %}">
+
+    </div>
+{#    <div class="right">#}
+{#      <img class="arrow" src="{% static 'Image/Linkedin_Blog/arrow5.png' %}">#}
+{#    </div>#}
+  </div>
+  <div class="section6">
+    <div class="left">
+      <h2>< حقوق و گروه های شغلی/></h2>
+        <p>
+            نمودار ما یک تحلیل دولایه از بازار کار IT ایران ارائه می دهد. در لایه اول نشان میدهد هر رنج حقوقی چه میزان آگهی حوزه IT را دربرمیگیرد .
+لایه دوم عمیق تر می شود و تخصیص گروه‌های شغلی را در هر بخش حقوقی نشان می دهد. این دیدگاه دو لایه، رابطه پویا بین حقوق و گروه‌های شغلی را آشکار می کند.
+
+        </p>
+      <img class="remote" src="{% static 'Image/Jobvision_Blog/salary.jpg' %}">
+<p>
+    برای جویندگان کار، این نمودار با نشان دادن اینکه کدام گروه‌های شغلی با انتظارات حقوقی آنها همسو هستند، تصمیم‌گیری می‌کند. کارفرمایان می‌توانند آگهی‌های شغلی خود را متناسب با روند پاداش و جذب استعدادهای مناسب تنظیم کنند.
+</p>
+    </div>
+{#    <div class="right">#}
+{#      <img class="arrow" src="{% static 'Image/Linkedin_Blog/arrow5.png' %}">#}
+{#    </div>#}
+  </div>
+
+
+</section>
+<script>
+    const images = [
+    { src: "{% static 'Image/Jobvision_Blog/data.png' %}", title: "هوش مصنوعی و داده (AI & Data Scientist)" },
+    { src: "{% static 'Image/Jobvision_Blog/security.png' %}", title: "امنیت (Security)" },
+    { src: "{% static 'Image/Jobvision_Blog/network.png' %}", title: "شبکه (Network)" },
+    { src: "{% static 'Image/Jobvision_Blog/programming.png' %}", title: "برنامه نویسی و توسعه ( Programming)" },
+    { src: "{% static 'Image/Jobvision_Blog/UI UX.png' %}", title: "طراحی (UI/UX)" }
+]; // لیست تصاویر
+</script>
+<script type="text/javascript" src="{% static 'JS/Linkedin_Blog.js' %}?{% now "U" %}"></script>
+<script type="text/javascript" src="{% static 'JS/Blog.js' %}?{% now "U" %}"></script>
+</body>
+</html>

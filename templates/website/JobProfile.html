@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/png" href="Image/Index/Logo.png"/>
+  <title>JobProfile</title>
+
+  <link rel="stylesheet" href="{% static 'CSS/Nav&Footer.css' %}" />
+  <link rel="stylesheet" href="{% static 'CSS/JobProfile.css' %}?{% now "U" %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{#<link rel="stylesheet" type="text/css" href='{% static "CSS\Index.css" %}?{% now "U" %}'/>#}
+</head>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<body>
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Navbar -->
+<!-- __________________________________________________________________________________________________________________ -->
+<nav class="navbar visible" id="navbar">
+  <img
+          onclick="document.body.classList.toggle('open')"
+          class="burger"
+          src="D:\Final_Project\Front_Code\Front_Code\menu.svg"
+  />
+  <div class="logo">
+    <a href="{% url 'website:home' %}"> <img src="{% static 'Image/Index/Logo.png' %}" /></a>
+  </div>
+
+  <div class="menu-items">
+    <div class="menu menu-left">
+      <div class="menu-links">
+        <div class="dropdown-Services">
+          <div class="content">
+            <span class="material-symbols-outlined"> </span>
+            <a href="#">خدمات</a>
+          </div>
+          <button type="button"></button>
+          <div class="menu">
+            <a>
+              <p>پی‌کُدرز</p>
+            </a>
+            <a>
+              <p>مارکت کد</p>
+            </a>
+            <a>
+              <p>تحلیل مهارت</p>
+            </a>
+          </div>
+        </div>
+        <a href="#">تماس با ما</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!--   -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+<div class="wrap">
+  <div class="header">
+    <div class="profile">
+      <img src="{{ post.image.url }}" alt="">
+    </div>
+  </div>
+  <div class="content">
+    <div class="skills">
+      <h1>{{ post.title }}</h1>
+
+      <ul>
+        <li class="cat">
+          <img class="add" src="{%  static 'Image/JobProfile/location.svg' %}" alt="">
+          <h2>دسته بندی شغلی  </h2>
+          <p>{{ post.category }}</p>
+          <h2>شهر  </h2>
+          <p>{{ post.city }}</p>
+          <h2>آدرس  </h2>
+          <p>{{ post.address }}</p>
+        </li>
+        <li class="time">
+          <img class="add" src="{% static 'Image/JobProfile/Salary.svg' %}" alt="">
+          <h2>نوع همکاری</h2>
+            {% for co in post.cooperation.all %}
+                <p>{{ co.name }}</p>
+            {% endfor %}
+          <h2>حقوق</h2>
+          <p>{{ post.salary }}</p>
+          <h2>روز و ساعت کاری</h2>
+          <p>{{ post.day }}</p>
+        </li>
+      </ul>
+      <ul>
+        <li class="edu">
+          <img class="add" src="{% static 'Image/JobProfile/edu.svg' %}" alt="">
+          <h2>حداقل مدرک  </h2>
+          <p>{{ post.edu }}</p>
+          <h2>حداقل سابقه کار  </h2>
+          <p>{{ post.experience }}</p>
+        </li>
+        <li class="personal">
+          <img class="add" src="{% static 'Image/JobProfile/gender.svg' %}" alt="">
+          <h2>سن</h2>
+          <p>{{ post.age }}</p>
+          <h2>جنسیت</h2>
+          <p>{{ post.gender }}</p>
+        </li>
+      </ul>
+      <ul>
+        <li class="skill">
+          <img class="add" src="{% static 'Image/JobProfile/skills.svg' %}" alt="">
+          <h2>مهارت های مورد نیاز</h2>
+            {% for skill in post.skills.all %}
+                <p>{{ skill.name}}</p>
+            {% endfor %}
+
+        </li>
+      </ul>
+      <ul>
+        <li class="des">
+          <h2>شرخ موقغیت شغلی</h2>
+          <p>{{ post.des }}</p>
+        </li>
+      </ul>
+      <ul>
+        <li class="option">
+          <img class="add" src="{% static 'Image/JobProfile/options.svg' %}" alt="">
+          <h2>تسهیلات و مزایا</h2>
+            {% for op in post.options.all %}
+                <p>{{ op.name }}</p>
+            {% endfor %}
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Footer -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+<footer class="footer-distributed">
+  <br><br>
+  <div class="footer-left">
+
+    <a href="{% url 'website:home' %}"><img src="{% static 'Image/Index/Logo.png' %}"></a>
+
+    <p class="footer-links">
+
+      <a href="#">همکاری</a>
+      /
+      <a href="#">پشتیبانی</a>
+      /
+      <a href="#">درباره ما</a>
+      /
+      <a href="#">ارتباط با ما</a>
+      /
+    </p>
+
+    <p class="footer-company-name">JobCoder © 2023</p>
+
+    <div class="footer-icons">
+
+      <a href="#" class="fa-brands fa-github"></a>
+      <a href="#" class="fa-brands fa-instagram"></a>
+      <a href="#" class="fa-brands fa-linkedin"></i></a>
+      <a href="#" class="fa-brands fa-twitter"></i></a>
+
+    </div>
+
+  </div>
+  <div class="footer-right">
+
+
+    <form action="#" method="post">
+
+      <input type="text" name="email" placeholder="ایمیل" autocomplete="on" required>
+      <textarea name="message" placeholder="پیعام" id="myTextarea" dir="rtl"></textarea>
+      <button type="button" class="send-massage">ارسال</button>
+
+    </form>
+
+  </div>
+
+</footer>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Scripts -->
+<!-- __________________________________________________________________________________________________________________ -->
+<script src="{% static 'JS/Index.js'%}"></script>
+{#<script src="{% static 'JS/JobProfile.js'%}"></script>#}
+
+{#<script src="D:\Final_Project\Front_Code\FrontCode\JS\Login.js"></script>#}
+<!--<script src="JS/Login.js"></script>-->
+<!---->
+<!---->
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+</body>
+</html>

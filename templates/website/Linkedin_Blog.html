@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>linkedin Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{% static 'CSS/Linkedin_Blog.css' %}?{% now "U" %}" />
+</head>
+<style>
+    .banner{
+        background: url("{% static 'Image/Linkedin_Blog/header .gif' %}")
+    }
+</style>
+<body>
+<nav>
+  <a href="{% url 'website:home' %}"> <img class="logo" src="{% static 'Image/Linkedin_Blog/LOGO.png' %}" /></a>
+</nav>
+<header id="banner" class="banner">
+</header>
+
+<section class="container">
+  <div class="section1">
+    <h1>< تحلیل لینکدین/></h1>
+    <p>به وبلاگ ما خوش آمدید که به کشف پیچیدگی های بازار کار فناوری اطلاعات با استفاده از قدرت داده اختصاص دارد. در این سفر، ما در حال بررسی تجزیه و تحلیل‌های به دست آمده از داده‌های لینکدین در کل جهان هستیم و روندهایی را که صنعت فناوری اطلاعات را شکل می‌دهند و مشاغل را تحت تأثیر قرار می‌دهند، روشن می‌کنیم.به وبلاگ ما خوش آمدید که به کشف پیچیدگی های بازار کار فناوری اطلاعات با استفاده از قدرت داده اختصاص دارد. در این سفر، ما در حال بررسی تجزیه و تحلیل‌های به دست آمده از داده‌های لینکدین در کل جهان هستیم و روندهایی را که صنعت فناوری اطلاعات را شکل می‌دهند و مشاغل را تحت تأثیر قرار می‌دهند، روشن می‌کنیم.</p>
+    <p>با استفاده از اطلاعات گسترده  LinkedIn، می‌توانیم بینش‌های کلیدی مانند مهارت‌های متداول ذکر شده در هر دسته را کشف کنیم. این بینش ها نقشه راه ارزشمندی را برای افرادی که به دنبال تقویت مجموعه مهارت های خود در راستای نیازهای صنعت هستند، ارائه می دهد.</p>
+  </div>
+  <div class="section2">
+      <div class="right">
+        <img src="{% static 'Image/Linkedin_Blog/arrow.svg' %}">
+      </div>
+      <div class="left">
+        <p>
+          بیایید به دنیای اکتشاف مبتنی بر داده وارد شویم و روندهایی را که آینده مشاغل فناوری اطلاعات را شکل می دهند، کشف کنیم.
+          گروه های شغلی حوزه IT به پنج گروه تقسیم شده اند :
+        </p>
+
+        <ul class="custom-list">
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	برنامه نویسی و توسعه ( Programming)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	هوش مصنوعی و داده (AI & Data Scientist)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	طراحی (UI/UX)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	شبکه (Network)</span>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="{% static 'Image/Linkedin_Blog/icon.svg' %}" alt="Icon">
+            </div>
+            <span>	امنیت (Security)</span>
+          </li>
+        </ul>
+
+        <p>
+          در بعضی تحلیل ها به دلیل دریافت داده‌ی دقیق‌تر، گروه داده (Data Scientist) و هوش مصنوعی(AI) جدا در نظر گرفته شده است.
+        </p>
+      </div>
+    </div>
+  <div class="section3">
+
+
+    <div class="left">
+      <h2>< تعداد آگهی های شغلی لینکدین/></h2>
+      <p>
+        نمودار ما تصویری سریع از تقاضای شغل در 6 گروه با استفاده از آگهی های لینکدین ترسیم می کند. هر نوار مربوط به یک گروه شغلی است که نشان دهنده تعداد آگهی های شغلی در آن دسته است. درصد های بالاتر نشان دهنده تقاضای بالاتر برای متخصصان در آن زمینه است. این بینش بصری به جویندگان کار کمک می‌کند تا صنایعی را با فرصت‌های فعال هدف قرار دهند و به کارفرمایان کمک می‌کند تا بفهمند کجا استعداد مورد نیاز است.
+      </p>
+      <img src="{% static 'Image/Linkedin_Blog/img.png' %}">
+    </div>
+    <div class="right">
+      <img class="arrow" src="{% static 'Image/Linkedin_Blog/arrowback.svg' %}">
+    </div>
+  </div>
+  <div class="section5">
+    <h2>< تجزیه و تحلیل مهارت های برتر در میان گروه های شغلی فناوری اطلاعات/></h2>
+      <p>
+        ما از قدرت داده‌های لینکدین استفاده می‌کنیم تا رایج‌ترین و تکرارشونده‌ترین مهارت‌ها را در گروه‌های شغلی متمایز در زمینه فناوری اطلاعات به نمایش بگذاریم. هر نمودار در دسته بندی شغلی خاصی قرار دارد و یک نمای کلی مختصر از مهارت های برجسته در آن حوزه ارائه می دهد.
+        با تقسیم کردن حوزه فناوری اطلاعات به این پنج گروه تخصصی، ما به درک متمرکزی از مهارت‌هایی که در هر حوزه اهمیت دارند، دست می‌یابیم. این نمودارها مهارت‌هایی را که متخصصان به طور مداوم ذکر می‌کنند، آشکار می‌کند و بلوک‌های سازنده موفقیت را در گروه‌های شغلی مربوطه نشان می‌دهد.
+
+      </p>
+  </div>
+
+  <div class="section4">
+
+
+    <div class="gallery">
+      <button class="prev-button" onclick="showImage(-1)">&#10095;</button>
+      <div class="gallery">
+        <img id="image" src="" alt="تصویر">
+        <p id="image-title">حوزه کاری</p>
+      </div>
+      <button class="next-button" onclick="showImage(1)">&#10094;</button>
+    </div>
+  </div>
+
+  <div class="section5">
+    <p>
+      با پیشرفت فناوری و پیشرفت صنایع، هماهنگی با این روندهای مهارتی ضروری است. این نمودارها به افراد و سازمان‌ها قدرت می‌دهد تا با تطبیق مداوم و کسب مهارت‌هایی که موفقیت را در گروه‌های شغلی تعیین‌شده‌شان در فناوری اطلاعات تعریف می‌کنند، رقابتی باقی بمانند.    </p>
+  </div>
+  <div class="section6">
+
+
+    <div class="left">
+      <h2>< توزیع آگهی شغلی LinkedIn بر اساس نوع محیط کاری/></h2>
+      <p>
+        نمودار تحلیلی ما یک تفکیک جامع از آگهی های شغلی در لینکدین را بر اساس نوع محیط کاری آنها ارائه می دهد: remote ، on-site و  hybride. این تجزیه و تحلیل دو لایه، توزیع فرصت های شغلی و نحوه بهره مندی گروه های شغلی مختلف در هر محیط کاری را روشن می کند.
+      </p>
+      <img src="{% static 'Image/Linkedin_Blog/img_7.png' %}">
+      <p>
+        این نمودار چندین بینش را ارائه می دهد. اول، درک بصری از نحوه تقسیم فرصت های شغلی بین محیط های کاری را ارائه می دهد. دوم، نشان می‌دهد که کدام گروه‌های شغلی در هر محیط کاری برجسته هستند.
+      </p>
+    </div>
+    <div class="right">
+      <img class="arrow" src="{% static 'Image/Linkedin_Blog/arrow5.png' %}">
+    </div>
+  </div>
+  <div class="section5">
+    <div >
+      <ul class="last">
+        <li>
+          <h3><img class="img_li" src="{% static 'Image/Linkedin_Blog/icon2.svg' %}">لایه اول: سه نوع محیط کاری: remote، on-site و  hybrid </h3>
+          <p>لایه درونی نمودار آگهی های شغلی را بر اساس نوع محیط کاری مجزا متمایز می کند. هر بخش نشان‌دهنده نسبت آگهی‌های شغلی است که در دسته‌های remote ، on-site و  hybride قرار می‌گیرند.</p>
+        </li>
+        <li>
+          <h3><img class="img_li" src="{% static 'Image/Linkedin_Blog/icon2.svg' %}">لایه دوم: توزیع درون انواع محیط‌های کاری</h3>
+        <p>لایه دوم نمودار در هر محیط کاری فرو می رود. در هر بخش (remote، on-site و  hybrid)، ما توزیع آگهی‌های شغلی را در گروه‌های شغلی مختلف تجزیه می‌کنیم. اندازه هر زیربخش سهمی را که هر گروه شغلی از آن محیط کاری خاص دریافت می‌کند، نشان می‌دهد.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</section>
+<script>
+    const images = [
+    { src: "{% static 'Image/Linkedin_Blog/AI&Data.png' %}", title: "هوش مصنوعی و داده (AI & Data Scientist)" },
+    { src: "{% static 'Image/Linkedin_Blog/cybersecurity.png' %}", title: "امنیت (Security)" },
+    { src: "{% static 'Image/Linkedin_Blog/Network.png' %}", title: "شبکه (Network)" },
+    { src: "{% static 'Image/Linkedin_Blog/programming&Developer.png' %}", title: "برنامه نویسی و توسعه ( Programming)" },
+    { src: "{% static 'Image/Linkedin_Blog/UIUX.png' %}", title: "طراحی (UI/UX)" }
+]; // لیست تصاویر
+</script>
+<script type="text/javascript" src="{% static 'JS/Linkedin_Blog.js' %}?{% now "U" %}"></script>
+<script type="text/javascript" src="{% static 'JS/Blog.js' %}?{% now "U" %}"></script>
+</body>
+</html>

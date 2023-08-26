@@ -1,0 +1,333 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="{% static 'Image/Index/Logo.png' %}"/>
+    <title>Advertising</title>
+
+    <link rel="stylesheet" href="{% static 'CSS/Nav&Footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'CSS/Advertising.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<body>
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Navbar -->
+<!-- __________________________________________________________________________________________________________________ -->
+<nav class="navbar visible" id="navbar">
+    <img
+            onclick="document.body.classList.toggle('open')"
+            class="burger"
+            src="D:\Final_Project\Front_Code\Front_Code\menu.svg"
+    />
+    <div class="logo">
+        <a href="{% url 'website:home' %}"> <img src="{% static 'Image/Index/Logo.png' %}" /></a>
+    </div>
+
+    <div class="menu-items">
+        <div class="menu menu-left">
+            <div class="menu-links">
+                <div class="dropdown-Services">
+                    <div class="content">
+                        <span class="material-symbols-outlined"> </span>
+                        <a href="#">خدمات</a>
+                    </div>
+                    <button type="button"></button>
+                    <div class="menu">
+                        <a>
+                            <p>پی‌کُدرز</p>
+                        </a>
+                        <a>
+                            <p>مارکت کد</p>
+                        </a>
+                        <a>
+                            <p>تحلیل مهارت</p>
+                        </a>
+                    </div>
+                </div>
+                <a href="#">تماس با ما</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!--   -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+<form class="add" action="{% url 'employer:Advertising' %}" method="POST" role="form" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h1><ثبت آگهی جدید/></h1>
+
+
+    <!--عنوان موقعیت شغلی-->
+    <div class="form-group">
+        <label for="textarea_title" class="control-label">عنوان موقعیت شغلی</label>
+        <textarea name="title" id="textarea_title" class="form-control" rows="2" placeholder="موقعیت شغلی"></textarea>
+    </div>
+
+
+
+    <!--        دسته بندی -->
+    <div class="form-group">
+        <label for="select-input-cat" class="control-label">دسته بندی شغلی</label>
+
+      <select id="select-input-cat" name="category" class="control-label">
+        <option value="هوش مصنوعی و داده">هوش مصنوعی و داده</option>
+        <option value="شبکه">شبکه</option>
+        <option value="امنیت">امنیت</option>
+        <option value="طراحی">طراحی</option>
+        <option value="برنامه نویسی و توسعه">برنامه نویسی و توسعه</option>
+      </select>
+
+    </div>
+
+
+    <!--        آدرس سایت-->
+    <div class="form-group">
+        <label for="url" class="control-label">وبسایت شرکت</label>
+        <input type="url" name="website" id="url" class="form-control" value="" placeholder="http://" title="">
+    </div>
+
+
+    <!--لوگوی شرکت-->
+    <div class="form-group">
+        <label for="file" class="control-label">آپلود لوگوی شرکت</label>
+        <input type="file" name="image" id="file" class="form-control" value="" required="required" pattern="" title="فایل">
+    </div>
+
+
+    <!--        شهر-->
+    <div class="form-group">
+        <label for="select-input-city" class="control-label">شهر</label>
+
+        <select id="select-input-city" name="city" class="form-control-city">
+        <option value="آذربایجان شرقی">آذربایجان شرقی</option>
+        <option value="آذربایجان غربی">آذربایجان غربی</option>
+        <option value="اردبیل">اردبیل</option>
+        <option value="اصفهان">اصفهان</option>
+        <option value="البرز">البرز</option>
+        <option value="ایلام">ایلام</option>
+        <option value="بوشهر">بوشهر</option>
+        <option value="تهران">تهران</option>
+        <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
+        <option value="خراسان جنوبی">خراسان جنوبی</option>
+        <option value="خراسان رضوی">خراسان رضوی</option>
+        <option value="خراسان شمالی">خراسان شمالی</option>
+        <option value="خوزستان">خوزستان</option>
+        <option value="زنجان">زنجان</option>
+        <option value="سمنان">سمنان</option>
+        <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
+        <option value="فارس">فارس</option>
+        <option value="قزوین">قزوین</option>
+        <option value="قم">قم</option>
+        <option value="کردستان">کردستان</option>
+        <option value="کرمان">کرمان</option>
+        <option value="کرمانشاه">کرمانشاه</option>
+        <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
+        <option value="گلستان">گلستان</option>
+        <option value="گیلان">گیلان</option>
+        <option value="لرستان">لرستان</option>
+        <option value="مازندران">مازندران</option>
+        <option value="مرکزی">مرکزی</option>
+        <option value="هرمزگان">هرمزگان</option>
+        <option value="همدان">همدان</option>
+        <option value="یزد">یزد</option>
+
+        <!-- ادامه موارد استانهای دیگر -->
+      </select>
+    </div>
+
+
+    <!--        آدرس-->
+    <div class="form-group">
+        <label for="textarea_title" class="control-label">آدرس محل کار</label>
+        <textarea name="address" id="textarea_address" class="form-control" rows="5" placeholder="آدرس"></textarea>
+    </div>
+
+
+    <!--        سابقه کاری-->
+    <div class="form-group">
+        <label for="select-input-exp" class="control-label">حداقل سابقه کاری</label>
+        <select name="experience" id="select-input-exp" class="form-control-exp">
+
+            <option value="مهم نیست">مهم نیست</option>
+            <option value="حداقل 1 سال">حداقل 1 سال</option>
+            <option value="بین 1 تا 2 سال">بین 1 تا 2 سال</option>
+            <option value="بین 3 تا 6 سال">بین 3 تا 6 سال</option>
+            <option value="بیشتر از 6 سال">بیشتر از 6 سال</option>
+
+        </select>
+    </div>
+
+
+    <!--        حقوق-->
+    <div class="form-group">
+        <label for="select-input-pay" class="control-label">حقوق</label>
+      <select id="select-input-pay" name="salary" class="form-control-pay">
+        <option value="توافقی">توافقی</option>
+        <option value="پایه وزارت کار">پایه وزارت کار</option>
+        <option value="بین 5 تا 6 میلیون">بین 5 تا 6 میلیون</option>
+        <option value="بین 6 تا 8 میلیون">بین 6 تا 8 میلیون</option>
+        <option value="بین 8 تا 10 میلیون">بین 8 تا 10 میلیون</option>
+        <option value="بین 10 تا 12 میلیون">بین 10 تا 12 میلیون</option>
+        <option value="بین 12 تا 15 میلیون">بین 12 تا 15 میلیون</option>
+        <option value="بین 15 تا 20 میلیون">بین 15 تا 20 میلیون</option>
+      </select>
+    </div>
+
+
+    <!--        همکاری-->
+    <div class="form-group">
+      <label for="select-input-pay" class="control-label">نوع همکاری</label>
+        <select name='cooperation' id="select-input-pay" class="form-control-pay">
+
+            <option value="دورکاری">دورکاری</option>
+            <option value="پاره وقت">پاره وقت</option>
+            <option value="تمام وقت">تمام وقت</option>
+            <option value="پروژه ای">پروژه ای</option>
+            <option value="کارآموزی">کارآموزی</option>
+
+        </select>
+
+    </div>
+
+
+    <!--        روز و ساعت کاری-->
+    <div class="form-group">
+        <label for="textarea_time" class="control-label">روز و ساعت کاری</label>
+        <textarea name="time_day" id="textarea_time" class="form-control" rows="2" placeholder="روز و ساعت کاری"></textarea>
+    </div>
+
+ <!--مهارت ها-->
+    <div class="form-group">
+        {% csrf_token %}
+      <label for="abilities">مهارت های مورد نیاز</label>
+      <div class="custom-textarea">
+        <div class="textarea-wrapper">
+
+          <textarea id="suggestions" name="suggestions" placeholder="مهارت های مورد نیاز را وارد کنید"></textarea>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--جنسیت-->
+    <div class="form-group">
+        <label class="control-label">جنسیت</label>
+        <label class="radio-inline">
+            <input type="radio" name="gender" id="inline_optionsRadios1" value="female">
+            زن
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="gender" id="inline_optionsRadios2" value="male" checked="">
+            مرد
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="gender" id="inline_optionsRadios2" value="no_diffrent" checked="">
+            مهم نیست
+        </label>
+    </div>
+
+
+
+    <!--        توضیحات-->
+    <div class="form-group">
+        <label for="textarea_des" class="control-label">شرح موقعیت شغلی</label>
+        <textarea name="description" id="textarea_des" class="form-control" rows="15" placeholder="توضیحات تکمیلی"></textarea>
+    </div>
+
+
+  <!--        مزایا و تسهیلات-->
+    <div class="form-group">
+        {% csrf_token %}
+      <label for="abilities">مزایا و تسهیلات</label>
+      <div class="custom-textarea">
+        <div class="textarea-wrapper">
+
+          <textarea id="options" name="options" placeholder="مزایا و تسهیلات خاص خود را وارد کنید"></textarea>
+        </div>
+      </div>
+    </div>
+
+
+
+    <button type="submit" class="btn-default">ثبت آگهی</button>
+
+
+
+</form>
+
+
+
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Footer -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+<footer class="footer-distributed">
+    <br><br>
+    <div class="footer-left">
+
+        <a href="{% url 'website:home' %}"><img src="{% static 'Image/Index/Logo.png' %}"></a>
+
+        <p class="footer-links">
+
+            <a href="#">همکاری</a>
+            /
+            <a href="#">پشتیبانی</a>
+            /
+            <a href="#">درباره ما</a>
+            /
+            <a href="#">ارتباط با ما</a>
+            /
+        </p>
+
+        <p class="footer-company-name">JobCoder © 2023</p>
+
+        <div class="footer-icons">
+
+            <a href="#" class="fa-brands fa-github"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+
+        </div>
+
+    </div>
+    <div class="footer-right">
+
+
+        <form action="#" method="post">
+
+            <input type="text" name="email" placeholder="ایمیل" autocomplete="on" required>
+            <textarea name="message" placeholder="پیعام" id="myTextarea" dir="rtl"></textarea>
+            <button type="button" class="send-massage">ارسال</button>
+
+        </form>
+
+    </div>
+
+</footer>
+<!-- just test-->
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- Scripts -->
+<!-- __________________________________________________________________________________________________________________ -->
+<script src="{% static 'JS/Index.js'%}"></script>
+<script src="{% static 'JS/Advertising.js'%}"></script>
+
+<script src="D:\Final_Project\Front_Code\FrontCode\JS\Login.js"></script>
+<!--<script src="JS/Login.js"></script>-->
+<!---->
+<!---->
+<!-- __________________________________________________________________________________________________________________ -->
+<!-- __________________________________________________________________________________________________________________ -->
+
+</body>
+</html>
